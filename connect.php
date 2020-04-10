@@ -1,2 +1,2 @@
 <?php
-$mysqli = new mysqli('remotemysql.com', 'c8NtAeI5eS', 'u926KRJdWp', 'c8NtAeI5eS');
+$mysqli = new mysqli('remotemysql.com', '2PQEPgjrOX', '2PQEPgjrOX', 'qbDEZq8Cbh');
