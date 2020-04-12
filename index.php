@@ -97,12 +97,11 @@ $mysqli->close();
 
 <body>
 
-<form action="add.php" method="POST">
+    <form action="add.php" method="POST">
         <textarea name="text" cols="30" rows="10"></textarea><br>
         <input type="text" name="name"><br>
         <button type="submit">отправить</button>
     </form>
-    12321312321312321312321321
 
 
 </body>
