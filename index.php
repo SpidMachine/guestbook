@@ -68,16 +68,6 @@ $startrow = ($currientpage - 1) * $pagesize;
 
 $pagenation = "<div class='pagenation'>";
 
-for ($i = 1; $i <= $pagecount; $i++) {
-    if ($currientpage == $i) {
-        $str = " class = 'selectedpage'";
-    } else {
-        $str = "";
-    }
-    $pagenation .= " <a href = '?page=$i'$str> $i </a>";
-}
-$pagenation .= "</div>";
-
 // Заполнение таблицы
 $result = $mysqli->query("SELECT * FROM `guests` LIMIT $startrow, $pagesize");
 echo $pagenation;
@@ -89,7 +79,17 @@ while ($row = $result->fetch_object()) {
     echo "</tr>";
 }
 echo "</table>\n";
-echo $pagenation;
+
+for ($i = 1; $i <= $pagecount; $i++) {
+    if ($currientpage == $i) {
+        $str = " class = 'selectedpage'";
+    } else {
+        $str = "";
+    }
+    $pagenation .= " <a href = '?page=$i'$str> $i </a>";
+}
+$pagenation .= "</div>";
+
 $result->free();
 
 $mysqli->close();
