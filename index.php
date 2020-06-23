@@ -90,6 +90,8 @@ for ($i = 1; $i <= $pagecount; $i++) {
 }
 $pagenation .= "</div>";
 
+echo $pagenation;
+
 $result->free();
 
 $mysqli->close();
